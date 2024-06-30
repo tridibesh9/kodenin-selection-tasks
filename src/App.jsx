@@ -15,7 +15,10 @@ function App() {
   const updateTotal = () =>{
     var newTotal = 0
     for (var i = 0;i<expenseList.length;i++){
-      newTotal+=parseInt(expenseList[i].amount);
+      if(expenseList[i].expensetype == "income")
+        newTotal+=parseInt(expenseList[i].amount);
+      else
+        newTotal-=parseInt(expenseList[i].amount);
     }
     setTotal(newTotal)
   }

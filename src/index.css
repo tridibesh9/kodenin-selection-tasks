@@ -1,1 +1,243 @@
 
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body{
+  padding: 0px;
+  margin: 0px;
+  background-color: #164863;
+}
+.Navbar {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  background-color: bisque;
+  width: 100%;
+  justify-content: center;
+  background-color: #9BBEC8;
+  height: 5%;
+  font-family: poppins;
+  font-size: 1.25rem;
+  opacity: 90%;
+  border-radius: 10px;
+}.Navbar:hover{
+  opacity: 100%;
+}
+.navElement{
+  text-align: center;
+  display: flex;
+  align-items:end;
+  color:#164863;
+}
+.navElement:hover {
+  height: 110%;
+  background-color: #DDF2FD;
+  color: #9BBEC8;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  opacity: 100%;
+}
+.Hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#DDF2FD;
+  font-size: 4rem;
+  font-family: poppins;
+  gap: 2rem;
+}
+.AddExpense {
+  font-family: poppins;
+  color: #DDF2FD;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #427D9D;
+  border-radius: 20px;
+}
+.AddExpense>div{
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.AddExpense>select{
+  background-color: #DDF2FD;
+  color: #427D9D;
+  width: 250px;
+  height: 6%;
+  border-radius: 10px;
+  border-color: #427D9D;
+}
+.AddExpense>input{
+  background-color: #DDF2FD;
+  color: #427D9D;
+  border-radius: 10px;
+  width: 250px;
+  height: 6%;
+  border-color: #427D9D;
+}
+.AddExpense>button{
+  background-color: #DDF2FD;
+  color: #427D9D;
+  border-radius: 10px;
+  width: 200px;
+  height: 6%;
+  border-color: #427D9D;
+}
+.List{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  background-color: #427D9D;
+  width: 100%;
+}
+.Expenses{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #9BBEC8;
+  color: #164863;
+  border-radius:10px ;
+  width: 100%;
+  font-size: 1rem;
+}
+.ExpenseList{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #427D9D;
+
+}
+.heading{
+  font-family: poppins;
+  background-color: #164863;
+  color: #DDF2FD;
+  font-size: 3rem;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Expenses>button{
+  background-color: #DDF2FD;
+  color: #427D9D;
+  border-radius: 10px;
+  width: 30px;
+  height: 6%;
+  border-color: #427D9D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.total{
+  background-color: #427D9D;
+  color: #9BBEC8;
+  font-size: 1.5rem;
+  font-family: poppins;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.total>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #DDF2FD;
+}
+*{
+  flex-wrap: wrap;
+}
+.Herotext{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.filter{
+  font-family: poppins;
+  color: #DDF2FD;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.filter>select{
+  background-color: #DDF2FD;
+  color: #427D9D;
+  width: 150px;
+  height: 10%;
+  border-radius: 10px;
+  border-color: #427D9D;
+  text-align: center;
+}
+.editmodal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #427D9D;
+  color: #9BBEC8;
+  width: 100%;
+  height: 40%;
+  padding-top: 5px;
+
+  gap: 10px;
+}
+.editmodal>input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9BBEC8;
+  color: #164863;
+  font-family: poppins;
+  border: #164863;
+  border-radius: 5px;
+}
+.editmodal>select{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9BBEC8;
+  color: #164863;
+  font-family: poppins;
+  border: #164863;
+  border-radius: 5px;
+}
+.editmodal>label{
+  color: #DDF2FD;
+  font-family: poppins;
+}
+.editmodal>button{
+border-radius: 5px;
+background-color: #DDF2FD;
+width: 30px;
+}
+.Expensebar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  background-color: #9BBEC8;
+}
+html{
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+}
