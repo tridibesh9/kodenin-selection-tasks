@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Editmodal from "./Editmodal";
 import { MdOutlineEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
+
 export default function AddnewExpense(props2) {
   console.log(props2);
    const [editState,setEdit] = useState(false)
@@ -9,9 +10,14 @@ export default function AddnewExpense(props2) {
    function changeEditstate() {
       setEdit(!editState)
    }
+   useEffect(
+    ()=>{
+      setStyle(props2.expensetype)
+    },[props2]
+   )
   return (
     <div className="Expensebar">
-    <div className="Expenses" style={styles === "income"?{backgroundColor : "#9BBEC8"}:{backgroundColor:"red"} }>
+    <div className="Expenses" style={styles === "income"?{backgroundColor : "#9AD0C2"}:{backgroundColor:"red"} }>
       <p>{props2.amount}</p>
       <p>{props2.ExpenseClass}</p>
       <p>{props2.Date}</p>

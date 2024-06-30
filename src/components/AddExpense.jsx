@@ -10,7 +10,8 @@ export default function AddExpense(props) {
     Date: "",
   });
   const [buttonState,setbutton] = useState(true)
-  
+  const[addbutton,setaddbutton] = useState(false)
+  const[subbutton,setsubbutton] = useState(true)
   function updateDetails(event) {
     const { name, value } = event.target;
     console.log(value);
@@ -23,6 +24,14 @@ export default function AddExpense(props) {
           Date: prevValue.Date,
         };
       } else if (name === "ExpenseClass") {
+          if(value === "Income"){
+            setaddbutton(false)
+            setsubbutton(true)
+          }
+          else{
+            setsubbutton(false)
+          setaddbutton(true)
+          }
         return {
           amount: prevValue.amount,
           ExpenseClass: value,
@@ -70,23 +79,25 @@ export default function AddExpense(props) {
         <option value="Food">Food</option>
       </select>
       <input type="date" name="Date" id="" onChange={updateDetails} value={input.Date}/>
-      <div><button type="submit" disabled= {buttonState} onClick={()=>{
+      <div><button type="submit" disabled= {(buttonState || addbutton)} onClick={()=>{
         console.log(input)
         const type = {expensetype :"income"}
         const transaction = {...input,...type}
         props.addList(transaction)
         clearinput();
+        setaddbutton(true)
 
       }}>
         <IoAddSharp />
 
       </button>
-      <button type="submit" disabled= {buttonState} onClick={()=>{
+      <button type="submit" disabled= {(buttonState || subbutton)} onClick={()=>{
         console.log(input)
         const type = {expensetype :"expense"}
         const transaction = {...input,...type}
         props.addList(transaction)
         clearinput();
+        setsubbutton(true)
 
       }}>
         <FaMinus />

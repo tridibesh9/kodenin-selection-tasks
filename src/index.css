@@ -241,3 +241,22 @@ html{
 a{
   text-decoration: none;
 }
+.Dashboard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9BBEC8;
+  font-family: poppins;
+  font-size: 2rem;
+  gap: 20px;
+  color: #DDF2FD;
+}
+.Dashboard p{
+  color: #427D9D;
+}
+.Dashboard div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

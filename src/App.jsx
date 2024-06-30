@@ -1,7 +1,7 @@
 import AddExpenses from "./components/AddExpense";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-
+import Dashboard from "./components/Dashboard";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import AddnewExpense from "./components/AddnewExpense";
@@ -11,16 +11,27 @@ function App() {
     const storedExpense = JSON.parse(localStorage.getItem('expense'));
     return storedExpense ? (storedExpense) : [];});
   const [total, setTotal] = useState(0);
+  const [income, setIncome] = useState(0);
+  const [expense, settotalExpense] = useState(0);
   const [filters,setfilter]= useState("none");
   const updateTotal = () =>{
     var newTotal = 0
+    var newincome = 0
+    var newExpense = 0
     for (var i = 0;i<expenseList.length;i++){
-      if(expenseList[i].expensetype == "income")
+      if(expenseList[i].expensetype == "income"){
         newTotal+=parseInt(expenseList[i].amount);
-      else
+        newincome+=parseInt(expenseList[i].amount);
+      }
+      else{
+
         newTotal-=parseInt(expenseList[i].amount);
+        newExpense+=parseInt(expenseList[i].amount);
+      }
     }
     setTotal(newTotal)
+    setIncome(newincome);
+    settotalExpense(newExpense)
   }
   const updatefilter = (event) =>{
     const { name, value } = event.target;
@@ -49,6 +60,7 @@ const updatelist = (key,input)=>{
     <div>
       <Navbar />
       <Hero />
+      <Dashboard total = {total} income = {income} expense = {expense}/>
       <AddExpenses addList={addList}  />
       <div className="ExpenseList" id="expenseList">
         <div className="heading"> EXPENSE LIST</div>
