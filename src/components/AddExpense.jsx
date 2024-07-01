@@ -86,6 +86,7 @@ export default function AddExpense(props) {
         props.addList(transaction)
         clearinput();
         setaddbutton(true)
+        setaddbutton(false)
 
       }}>
         <IoAddSharp />
