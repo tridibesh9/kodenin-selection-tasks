@@ -17,7 +17,7 @@ export default function AddnewExpense(props2) {
    )
   return (
     <div className="Expensebar">
-    <div className="Expenses" style={styles === "income"?{backgroundColor : "#9AD0C2"}:{backgroundColor:"red"} }>
+    <div className="Expenses" style={styles === "income"?{backgroundColor : "#9AD0C2"}:{backgroundColor:"#FA9884"} }>
       <p>{props2.amount}</p>
       <p>{props2.ExpenseClass}</p>
       <p>{props2.Date}</p>
