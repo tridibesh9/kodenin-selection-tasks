@@ -57,6 +57,7 @@ export default function AddExpense(props) {
       ExpenseClass: "Income",
       Date: ""}
       setInputs(newinput)
+      setaddbutton(false)
   }
   
   return (
