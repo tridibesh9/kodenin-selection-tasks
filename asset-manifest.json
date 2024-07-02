@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/kodenin-selection-tasks/static/css/main.64f45782.css",
+    "main.css": "/kodenin-selection-tasks/static/css/main.7e0d1925.css",
     "main.js": "/kodenin-selection-tasks/static/js/main.f654eddc.js",
     "static/media/logo.png": "/kodenin-selection-tasks/static/media/logo.ecae37443c9d4f50019b.png",
     "index.html": "/kodenin-selection-tasks/index.html",
-    "main.64f45782.css.map": "/kodenin-selection-tasks/static/css/main.64f45782.css.map",
+    "main.7e0d1925.css.map": "/kodenin-selection-tasks/static/css/main.7e0d1925.css.map",
     "main.f654eddc.js.map": "/kodenin-selection-tasks/static/js/main.f654eddc.js.map"
   },
   "entrypoints": [
-    "static/css/main.64f45782.css",
+    "static/css/main.7e0d1925.css",
     "static/js/main.f654eddc.js"
   ]
 }
