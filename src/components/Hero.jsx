@@ -6,7 +6,7 @@ export default function Hero() {
       <div>
         <img src={logo} alt="" />
       </div>
-      <div className="Herotext">Finance Manager</div>
+      <div className="Herotext">Expense Manager</div>
     </div>
   );
 }

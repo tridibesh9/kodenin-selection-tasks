@@ -13,7 +13,7 @@ export default function Dashboard(props){
         },[props]
     )
     return(
-        <div className="Dashboard">
+        <div className="Dashboard" id="Dashboards">
             <div className="heading dash">DASHBOARD</div>
             <div id="mychart" >
                 <div id="Graph1"><Graphs data = {props.datas} title = "Expense habit by no of Transactions" chartType = "PieChart" /></div>
