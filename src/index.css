@@ -254,10 +254,11 @@ a{
   color: #DDF2FD;
 }
 .summary{
+  padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items:center;
-  background-color: #427D9D;
+  background-color: #9BBEC8;
   width: 100%;
   gap: 20px;
 }
