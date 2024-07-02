@@ -244,19 +244,37 @@ a{
 .Dashboard{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:flex-start;
   background-color: #9BBEC8;
   font-family: poppins;
   font-size: 2rem;
-  gap: 20px;
-  color: #DDF2FD;
+  color: #164863;
+  height: 100vh;
 }
 .Dashboard p{
-  color: #427D9D;
+  color: #DDF2FD;
 }
-.Dashboard div{
+.summary{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color: #427D9D;
+  width: 100%;
+  gap: 20px;
+}
+.summary div{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.dash{
+  background-color: #427D9D;
+  font-family: poppins;
+}
+#mychart{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

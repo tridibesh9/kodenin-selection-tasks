@@ -13,11 +13,13 @@ function App() {
   const [total, setTotal] = useState(0);
   const [income, setIncome] = useState(0);
   const [expense, settotalExpense] = useState(0);
+  const [expensedata,setExpensedata]= useState([])
   const [filters,setfilter]= useState("none");
   const updateTotal = () =>{
     var newTotal = 0
     var newincome = 0
     var newExpense = 0
+    var newdata = []
     for (var i = 0;i<expenseList.length;i++){
       if(expenseList[i].expensetype == "income"){
         newTotal+=parseInt(expenseList[i].amount);
@@ -27,11 +29,13 @@ function App() {
 
         newTotal-=parseInt(expenseList[i].amount);
         newExpense+=parseInt(expenseList[i].amount);
+        newdata.push(expenseList[i])
       }
     }
     setTotal(newTotal)
     setIncome(newincome);
     settotalExpense(newExpense)
+    setExpensedata(newdata)
   }
   const updatefilter = (event) =>{
     const { name, value } = event.target;
@@ -60,7 +64,7 @@ const updatelist = (key,input)=>{
     <div>
       <Navbar />
       <Hero />
-      <Dashboard total = {total} income = {income} expense = {expense}/>
+      <Dashboard total = {total} income = {income} expense = {expense} datas = {expensedata}/>
       <AddExpenses addList={addList}  />
       <div className="ExpenseList" id="expenseList">
         <div className="heading"> EXPENSE LIST</div>
@@ -71,7 +75,8 @@ const updatelist = (key,input)=>{
         <option value="Tech Purchase">Tech Purchase</option>
         <option value="Travel">Travel</option>
         <option value="Food">Food</option>
-      </select></div>
+      </select>
+      </div>
         <div className="List">
         {(expenseList.filter((item)=>{
           if(filters === "none")
